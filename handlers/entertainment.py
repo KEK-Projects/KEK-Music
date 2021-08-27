@@ -32,7 +32,7 @@ async def randomp(client, message):
     try:
         resp = request.get("https://api-tede.herokuapp.com/api/randomp").json()
         results = f"{resp['url']}"
-        return await client.send_video(message.chat.id. video=results)
+        return await client.send_video(message.chat.id, video=results)
     except Exception:
         await message.reply_text("`Something went wrong Stupid...`")
 
