@@ -17,8 +17,8 @@ async def asupan(client, message):
         await message.reply_text("`Something went wrong Stupid...`")
         
         
-@Client.on_message(command(["randomh", f"randomh@{BOT_USERNAME}"]))a
-sync def randomh(client, message):
+@Client.on_message(command(["randomh", f"randomh@{BOT_USERNAME}"]))
+async def randomh(client, message):
     try:
         resp = requests.get("https://api-tede.herokuapp.com/api/randomh").json()
         results = f"{resp['url']}"
@@ -27,8 +27,8 @@ sync def randomh(client, message):
         await message.reply_text("`Something went wrong Stupid...`")
 
         
-@Client.on_message(command (["randomp", f"randomp@{BOT_USERNAME}"]))a
-sync def randomp(client, message):
+@Client.on_message(command(["randomp", f"randomp@{BOT_USERNAME}"]))
+async def randomp(client, message):
     try:
         resp = request.get("https://api-tede.herokuapp.com/api/randomp").json()
         results = f"{resp['url']}"
